@@ -5,6 +5,9 @@ require 'fileutils'
 module Toaster
 	module Generators
 		class ToasterGenerator < Rails::Generators::Base
+
+			source_root File.expand_path("templates", File.dirname(__FILE__))
+
 			def copy_initializer
 				unless File.exist?(File.expand_path("config/locales/toaster.en.yml", Rails.root))
 					copy_file "locales/toaster.yml", "config/locales/toaster.yml"
