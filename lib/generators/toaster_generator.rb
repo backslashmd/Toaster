@@ -8,8 +8,12 @@ module Toaster
 
 			source_root File.expand_path("templates", File.dirname(__FILE__))
 
-			def copy_initializer
+			def copy_locale
 				copy_file "locales/toaster.yml", "config/locales/toaster.en.yml"
+			end
+
+			def copy_initializer
+				copy_file "initializers/toaster.rb", "config/initilaizers/toaster.rb"
 			end
 		end
 	end
