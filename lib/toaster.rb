@@ -11,18 +11,14 @@ module Toaster
 	end
 
 	class PasswordValidator < ActiveModel::Validator
-		def validate(record, &decrypt)
-			default_options = { password_field: :password, min_length: 8, min_numeric: 0, min_alpha: 0, min_punctuation: 0, exclude: "" }
+		def validate(record)
+			default_options = { password_field: :password, min_length: 8, min_numeric: 0, min_alpha: 0, min_punctuation: 0, exclude: "", decrypt: Proc.new{ |pwd| pwd } }
 			opts = default_options.merge options
 			field_name = opts[:password_field].to_s.humanize
-			field_value = record[opts[:password_field]]
+			field_value = opts[:decrypt].call(record[opts[:password_field]])
+			puts "============================================================================"
 			puts "============================================================================"
 			puts field_value
-			if block_given?
-				field_value = decrypt.call(field_value)
-				puts field_value
-			end
-			puts "============================================================================"
 			puts record[opts[:password_field]]
 			puts "============================================================================"
 			record.errors[:base] << I18n.t("toaster.error.min_length", field: field_name, min: opts[:min_length]) if field_value.length < opts[:min_length]
