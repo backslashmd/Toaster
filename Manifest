@@ -1,0 +1,8 @@
+Gemfile
+Gemfile.lock
+Manifest
+README.md
+Rakefile
+lib/generators/templates/locales/toaster.yml
+lib/locales/toaster.yml
+lib/toaster.rb
