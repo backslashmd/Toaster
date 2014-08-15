@@ -13,6 +13,7 @@ module Toaster
 	class PasswordValidator < ActiveModel::Validator
 		def validate(record)
 			puts record.to_yaml
+			puts params
 			default_options = { password_field: :password, min_length: 8, min_numeric: 0, min_alpha: 0, min_punctuation: 0, exclude: "" }
 			opts = default_options.merge options
 			field_name = opts[:password_field].to_s.humanize
