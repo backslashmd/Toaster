@@ -21,7 +21,6 @@ module Toaster
 			record.errors[:base] << I18n.t("toaster.error.min_alpha", field: field_name, min: opts[:min_alpha]) if field_value.count("A-Za-z") < opts[:min_alpha]
 			record.errors[:base] << I18n.t("toaster.error.min_punctuation", field: field_name, min: opts[:min_punctuation]) if field_value.count("^A-Za-z0-9 ") < opts[:min_punctuation]
 			record.errors[:base] << I18n.t("toaster.error.invalid_characters", field: field_name, characters: opts[:exclude].chars.join(" ")) if field_value.count(opts[:exclude]) > 0
-			puts record.errors.to_yaml
 		end
 	end
 end
