@@ -11,8 +11,8 @@ Gem::Specification.new do |s|
   s.date = "2014-08-15"
   s.description = "Password validation."
   s.email = "eric@commercekitchen.com"
-  s.extra_rdoc_files = ["README.md", "lib/locales/toaster.yml", "lib/toaster.rb"]
-  s.files = ["Gemfile", "Gemfile.lock", "Manifest", "README.md", "Rakefile", "lib/locales/toaster.yml", "lib/toaster.rb", "toaster.gemspec"]
+  s.extra_rdoc_files = ["README.md", "lib/generators/templates/locales/toaster.yml", "lib/generators/toaster_generator.rb", "lib/toaster.rb"]
+  s.files = ["Gemfile", "Gemfile.lock", "Manifest", "README.md", "Rakefile", "lib/generators/templates/locales/toaster.yml", "lib/generators/toaster_generator.rb", "lib/toaster.rb", "toaster.gemspec"]
   s.homepage = "http://www.commercekitchen.com"
   s.rdoc_options = ["--line-numbers", "--title", "Toaster", "--main", "README.md"]
   s.rubyforge_project = "toaster"

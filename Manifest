@@ -3,6 +3,7 @@ Gemfile.lock
 Manifest
 README.md
 Rakefile
-lib/locales/toaster.yml
+lib/generators/templates/locales/toaster.yml
+lib/generators/toaster_generator.rb
 lib/toaster.rb
 toaster.gemspec
