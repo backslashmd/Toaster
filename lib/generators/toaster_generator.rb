@@ -9,9 +9,7 @@ module Toaster
 			source_root File.expand_path("templates", File.dirname(__FILE__))
 
 			def copy_initializer
-				unless File.exist?(File.expand_path("config/locales/toaster.en.yml", Rails.root))
-					copy_file "locales/toaster.yml", "config/locales/toaster.yml"
-				end
+				copy_file "locales/toaster.yml", "config/locales/toaster.en.yml"
 			end
 		end
 	end
