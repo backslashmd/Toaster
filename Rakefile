@@ -11,6 +11,6 @@ Echoe.new('toaster', '0.1.0') do |p|
 	p.ignore_pattern = ["tmp/*", "script/*"]
 end
 
-Dir.glob(File.dirname(__FILE__) + "lib/locales/*.{rb,yml}")
+Dir.glob("#{File.dirname(__FILE__)}/lib/locales/*.{rb,yml}")
 
 Dir["#{File.dirname(__FILE__)}/tasks/*.rake"].sort.each{ |ext| load ext }
