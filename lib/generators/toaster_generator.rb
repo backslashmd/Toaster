@@ -13,7 +13,7 @@ module Toaster
 			end
 
 			def copy_initializer
-				copy_file "initializers/toaster.rb", "config/initilaizers/toaster.rb"
+				copy_file "initializers/toaster.rb", "config/initializers/toaster.rb"
 			end
 		end
 	end
