@@ -5,6 +5,7 @@ module Toaster
 
 	module ClassMethods
 		def toast(*args)
+			include ActiveModel::Validations
 			options = args.extract_options!
 			validates_with PasswordValidator, options, :on => :update
 		end
