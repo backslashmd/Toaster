@@ -1,10 +1,10 @@
 en:
   toaster:
     error:
-      min_length: "%{field} must be %{min} or more characters."
-      min_numeric: "%{field} must contain at least %{min} numbers."
-      min_alpha: "%{field} must contain at least %{min} letters."
-      min_punctuation: "%{field} must contain at least %{min} punctuation characters."
-      min_uppercase: "%{field} must contain at least %{min} upper case letters."
-      min_lowercase: "%{field} must contain at least %{min} lower case letters."
-      invalid_characters: "%{field} may not contain any of the following characters: %{characters}"
+      min_length: "must be %{min} or more characters."
+      min_numeric: "must contain at least %{min} numbers."
+      min_alpha: "must contain at least %{min} letters."
+      min_punctuation: "must contain at least %{min} punctuation characters."
+      min_uppercase: "must contain at least %{min} upper case letters."
+      min_lowercase: "must contain at least %{min} lower case letters."
+      invalid_characters: "may not contain any of the following characters: %{characters}"
