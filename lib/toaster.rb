@@ -17,7 +17,7 @@ module Toaster
 			opts = default_options.merge options
 			field_name = opts[:label].nil? ? opts[:password_field].to_s.humanize : opts[:label].to_s
 			field_value = opts[:decrypt].call(record[opts[:password_field]])
-			return nil if field_value.blank?
+			return true if field_value.blank? || record[opts[:password_field]].blank?
 			record.errors[field_name] << I18n.t("toaster.error.min_length", min: opts[:min_length]) if field_value.length < opts[:min_length]
 			record.errors[field_name] << I18n.t("toaster.error.min_numeric", min: opts[:min_numeric]) if field_value.count("0-9") < opts[:min_numeric]
 			record.errors[field_name] << I18n.t("toaster.error.min_alpha", min: opts[:min_alpha]) if field_value.count("A-Za-z") < opts[:min_alpha]
